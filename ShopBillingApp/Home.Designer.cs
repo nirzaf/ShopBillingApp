@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuBrand = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuCategory = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuCustomers = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,44 +57,45 @@
             this.ExitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(832, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(916, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // masterToolStripMenuItem
             // 
             this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.categoryToolStripMenuItem,
-            this.productsToolStripMenuItem,
-            this.customersToolStripMenuItem});
+            this.MenuBrand,
+            this.MenuCategory,
+            this.MenuProduct,
+            this.MenuCustomers});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(74, 25);
             this.masterToolStripMenuItem.Text = "Master";
             // 
-            // toolStripMenuItem1
+            // MenuBrand
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
-            this.toolStripMenuItem1.Text = "Brand";
+            this.MenuBrand.Name = "MenuBrand";
+            this.MenuBrand.Size = new System.Drawing.Size(180, 26);
+            this.MenuBrand.Text = "Brand";
+            this.MenuBrand.Click += new System.EventHandler(this.MenuBrand_Click);
             // 
-            // categoryToolStripMenuItem
+            // MenuCategory
             // 
-            this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
-            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.categoryToolStripMenuItem.Text = "Category";
+            this.MenuCategory.Name = "MenuCategory";
+            this.MenuCategory.Size = new System.Drawing.Size(180, 26);
+            this.MenuCategory.Text = "Category";
             // 
-            // productsToolStripMenuItem
+            // MenuProduct
             // 
-            this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-            this.productsToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.productsToolStripMenuItem.Text = "Products";
+            this.MenuProduct.Name = "MenuProduct";
+            this.MenuProduct.Size = new System.Drawing.Size(180, 26);
+            this.MenuProduct.Text = "Products";
             // 
-            // customersToolStripMenuItem
+            // MenuCustomers
             // 
-            this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
-            this.customersToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.customersToolStripMenuItem.Text = "Customers";
+            this.MenuCustomers.Name = "MenuCustomers";
+            this.MenuCustomers.Size = new System.Drawing.Size(180, 26);
+            this.MenuCustomers.Text = "Customers";
             // 
             // SettingsToolStripMenuItem
             // 
@@ -157,7 +158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(832, 450);
+            this.ClientSize = new System.Drawing.Size(916, 569);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -177,10 +178,10 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem categoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuBrand;
+        private System.Windows.Forms.ToolStripMenuItem MenuCategory;
+        private System.Windows.Forms.ToolStripMenuItem MenuProduct;
+        private System.Windows.Forms.ToolStripMenuItem MenuCustomers;
         private System.Windows.Forms.ToolStripMenuItem SettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ProductsToolStripMenuItem1;

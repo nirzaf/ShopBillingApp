@@ -21,5 +21,14 @@ namespace ShopBillingApp
         {
             Application.Exit();
         }
+
+        private void MenuBrand_Click(object sender, EventArgs e)
+        {
+            Brand Child = new Brand
+            {
+                MdiParent = this
+            };
+            Child.Show();
+        }
     }
 }
