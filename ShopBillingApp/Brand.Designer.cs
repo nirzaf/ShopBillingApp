@@ -104,10 +104,11 @@
             // 
             // CMBCategory
             // 
+            this.CMBCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CMBCategory.FormattingEnabled = true;
             this.CMBCategory.Location = new System.Drawing.Point(139, 74);
             this.CMBCategory.Name = "CMBCategory";
-            this.CMBCategory.Size = new System.Drawing.Size(257, 30);
+            this.CMBCategory.Size = new System.Drawing.Size(257, 27);
             this.CMBCategory.TabIndex = 8;
             this.CMBCategory.SelectedIndexChanged += new System.EventHandler(this.CMBCategory_SelectedIndexChanged);
             // 
@@ -159,9 +160,9 @@
             this.DGVBrand.BackgroundColor = System.Drawing.Color.White;
             this.DGVBrand.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVBrand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVBrand.Location = new System.Drawing.Point(25, 194);
+            this.DGVBrand.Location = new System.Drawing.Point(31, 194);
             this.DGVBrand.Name = "DGVBrand";
-            this.DGVBrand.Size = new System.Drawing.Size(593, 260);
+            this.DGVBrand.Size = new System.Drawing.Size(583, 254);
             this.DGVBrand.TabIndex = 4;
             this.DGVBrand.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVBrand_CellClick);
             this.DGVBrand.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVBrand_CellContentClick);
@@ -171,7 +172,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(25, 166);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(595, 301);
+            this.groupBox2.Size = new System.Drawing.Size(595, 288);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Brand Details";
