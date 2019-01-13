@@ -98,5 +98,21 @@ namespace ShopBillingApp.DAL
         {
             TxtCategoryName.Text = "";
         }
+
+        private void TxtFilterByCatName_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                BindingSource DGV = new BindingSource
+                {
+                    DataSource = DGVCategory.DataSource,
+                    Filter = string.Format("`Category Name` LIKE '%{0}' OR `Category Name` LIKE '%{0}%'", TxtFilterByCatName.Text.Trim())
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

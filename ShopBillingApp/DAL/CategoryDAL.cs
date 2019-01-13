@@ -37,7 +37,7 @@ namespace ShopBillingApp.DAL
         {
             try
             {
-                MySqlCommand cmd = new MySqlCommand("LoadDGVCategory", C.Con)
+                MySqlCommand cmd = new MySqlCommand("LoadCategory", C.Con)
                 {
                     CommandType = CommandType.StoredProcedure
                 };

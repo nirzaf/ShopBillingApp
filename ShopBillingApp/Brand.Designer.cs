@@ -31,9 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Brand));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnUpdate = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Label = new System.Windows.Forms.Label();
             this.CMBCategory = new System.Windows.Forms.ComboBox();
+            this.BtnReset = new System.Windows.Forms.PictureBox();
+            this.BtnAddBrand = new System.Windows.Forms.PictureBox();
             this.TxtBrandName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.DGVBrand = new System.Windows.Forms.DataGridView();
@@ -41,14 +44,11 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
-            this.BtnUpdate = new System.Windows.Forms.PictureBox();
-            this.BtnReset = new System.Windows.Forms.PictureBox();
-            this.BtnAddBrand = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVBrand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnReset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAddBrand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVBrand)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -69,6 +69,18 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Brand";
+            // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.Image = global::ShopBillingApp.Properties.Resources.Apps_system_software_update_icon;
+            this.BtnUpdate.Location = new System.Drawing.Point(510, 32);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(48, 48);
+            this.BtnUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnUpdate.TabIndex = 9;
+            this.BtnUpdate.TabStop = false;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            this.BtnUpdate.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnUpdate_MouseMove);
             // 
             // label1
             // 
@@ -98,6 +110,30 @@
             this.CMBCategory.Size = new System.Drawing.Size(257, 30);
             this.CMBCategory.TabIndex = 8;
             this.CMBCategory.SelectedIndexChanged += new System.EventHandler(this.CMBCategory_SelectedIndexChanged);
+            // 
+            // BtnReset
+            // 
+            this.BtnReset.Image = global::ShopBillingApp.Properties.Resources.Clear_icon;
+            this.BtnReset.Location = new System.Drawing.Point(456, 32);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(48, 48);
+            this.BtnReset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnReset.TabIndex = 6;
+            this.BtnReset.TabStop = false;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            this.BtnReset.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnReset_MouseMove);
+            // 
+            // BtnAddBrand
+            // 
+            this.BtnAddBrand.Image = global::ShopBillingApp.Properties.Resources.add_icon;
+            this.BtnAddBrand.Location = new System.Drawing.Point(402, 32);
+            this.BtnAddBrand.Name = "BtnAddBrand";
+            this.BtnAddBrand.Size = new System.Drawing.Size(48, 48);
+            this.BtnAddBrand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnAddBrand.TabIndex = 5;
+            this.BtnAddBrand.TabStop = false;
+            this.BtnAddBrand.Click += new System.EventHandler(this.BtnAddBrand_Click);
+            this.BtnAddBrand.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnAddBrand_MouseMove);
             // 
             // TxtBrandName
             // 
@@ -140,42 +176,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Brand Details";
             // 
-            // BtnUpdate
-            // 
-            this.BtnUpdate.Image = global::ShopBillingApp.Properties.Resources.Apps_system_software_update_icon;
-            this.BtnUpdate.Location = new System.Drawing.Point(510, 32);
-            this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(48, 48);
-            this.BtnUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnUpdate.TabIndex = 9;
-            this.BtnUpdate.TabStop = false;
-            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
-            this.BtnUpdate.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnUpdate_MouseMove);
-            // 
-            // BtnReset
-            // 
-            this.BtnReset.Image = global::ShopBillingApp.Properties.Resources.Clear_icon;
-            this.BtnReset.Location = new System.Drawing.Point(456, 32);
-            this.BtnReset.Name = "BtnReset";
-            this.BtnReset.Size = new System.Drawing.Size(48, 48);
-            this.BtnReset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnReset.TabIndex = 6;
-            this.BtnReset.TabStop = false;
-            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
-            this.BtnReset.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnReset_MouseMove);
-            // 
-            // BtnAddBrand
-            // 
-            this.BtnAddBrand.Image = global::ShopBillingApp.Properties.Resources.add_icon;
-            this.BtnAddBrand.Location = new System.Drawing.Point(402, 32);
-            this.BtnAddBrand.Name = "BtnAddBrand";
-            this.BtnAddBrand.Size = new System.Drawing.Size(48, 48);
-            this.BtnAddBrand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnAddBrand.TabIndex = 5;
-            this.BtnAddBrand.TabStop = false;
-            this.BtnAddBrand.Click += new System.EventHandler(this.BtnAddBrand_Click);
-            this.BtnAddBrand.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BtnAddBrand_MouseMove);
-            // 
             // Brand
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -184,7 +184,7 @@
             this.Controls.Add(this.DGVBrand);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -194,10 +194,10 @@
             this.Load += new System.EventHandler(this.Brand_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVBrand)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnReset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAddBrand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVBrand)).EndInit();
             this.ResumeLayout(false);
 
         }

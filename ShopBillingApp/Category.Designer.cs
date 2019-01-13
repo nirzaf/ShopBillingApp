@@ -37,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DGVCategory = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtFilterByCatName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnReset)).BeginInit();
@@ -116,9 +118,9 @@
             // 
             this.groupBox2.Controls.Add(this.DGVCategory);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(23, 121);
+            this.groupBox2.Location = new System.Drawing.Point(23, 170);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(595, 333);
+            this.groupBox2.Size = new System.Drawing.Size(595, 284);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Category Details";
@@ -129,11 +131,30 @@
             this.DGVCategory.BackgroundColor = System.Drawing.Color.White;
             this.DGVCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCategory.Location = new System.Drawing.Point(1, 36);
+            this.DGVCategory.Location = new System.Drawing.Point(6, 28);
             this.DGVCategory.Name = "DGVCategory";
-            this.DGVCategory.Size = new System.Drawing.Size(593, 291);
+            this.DGVCategory.Size = new System.Drawing.Size(593, 238);
             this.DGVCategory.TabIndex = 5;
             this.DGVCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCategory_CellClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 22);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Filter By Category Name";
+            // 
+            // TxtFilterByCatName
+            // 
+            this.TxtFilterByCatName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFilterByCatName.Location = new System.Drawing.Point(252, 130);
+            this.TxtFilterByCatName.Name = "TxtFilterByCatName";
+            this.TxtFilterByCatName.Size = new System.Drawing.Size(250, 26);
+            this.TxtFilterByCatName.TabIndex = 10;
+            this.TxtFilterByCatName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFilterByCatName_KeyUp);
             // 
             // Category
             // 
@@ -142,6 +163,8 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(632, 466);
+            this.Controls.Add(this.TxtFilterByCatName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,6 +184,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVCategory)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -174,5 +198,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView DGVCategory;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TxtFilterByCatName;
     }
 }

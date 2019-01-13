@@ -59,6 +59,45 @@ namespace ShopBillingApp.DAL
             }
         }
 
+        public DataSet LoadCMBBrand()
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("GetBrands", C.Con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                MySqlDataAdapter Sda = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                Sda.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
+
+        public DataTable LoadValueMemberOfBrandComboBox(string CmbBName)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("LoadValueMemberOfBrandComboBox", C.Con);
+                cmd.Parameters.Add(new MySqlParameter("@B_Name", CmbBName));
+                cmd.CommandType = CommandType.StoredProcedure;
+                MySqlDataAdapter Sda = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                Sda.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
+
         public int UpdateBrand(BrandBAL B)
         {
             try

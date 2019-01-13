@@ -137,5 +137,58 @@ namespace ShopBillingApp
                 MessageBox.Show("Please Enter the Customer Name");
             }
         }
+
+        private void TxtFilterByName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        
+        }
+
+        private void TxtFilterByCity_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                BindingSource DGV = new BindingSource
+                {
+                    DataSource = DGVCustomers.DataSource,
+                    Filter = string.Format("`City` LIKE '%{0}' OR `City` LIKE '%{0}%'", TxtFilterByCity.Text.Trim())
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void TxtFilterByName_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                BindingSource DGV = new BindingSource
+                {
+                    DataSource = DGVCustomers.DataSource,
+                    Filter = string.Format("`Full Name` LIKE '%{0}' OR `Full Name` LIKE '%{0}%'", TxtFilterByName.Text.Trim())
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void TxtFilterByContact_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                BindingSource DGV = new BindingSource
+                {
+                    DataSource = DGVCustomers.DataSource,
+                    Filter = string.Format("`Contact No` LIKE '%{0}' OR `Contact No` LIKE '%{0}%'", TxtFilterByContact.Text.Trim())
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

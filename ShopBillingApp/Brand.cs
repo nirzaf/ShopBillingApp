@@ -31,8 +31,8 @@ namespace ShopBillingApp
             CategoryDAL cd = new CategoryDAL();
             DataSet ds = cd.GetAllCategory();
             CMBCategory.DataSource = ds.Tables[0];
-            CMBCategory.ValueMember = "CatID";
-            CMBCategory.DisplayMember = "CategoryName";
+            CMBCategory.ValueMember = "Category ID";
+            CMBCategory.DisplayMember = "Category Name";
         }
 
         public void LoadDGVBrands()
@@ -142,5 +142,6 @@ namespace ShopBillingApp
         {
             toolTip3.SetToolTip(BtnUpdate, "Update the Brand Details");
         }
+
     }
 }

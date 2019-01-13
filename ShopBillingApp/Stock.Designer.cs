@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stock));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtQuantity = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Label = new System.Windows.Forms.Label();
             this.BtnReset = new System.Windows.Forms.PictureBox();
@@ -38,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DGVStockDetails = new System.Windows.Forms.DataGridView();
-            this.TxtQuantity = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnReset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAddStock)).BeginInit();
@@ -63,6 +63,15 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Stock";
+            // 
+            // TxtQuantity
+            // 
+            this.TxtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtQuantity.Location = new System.Drawing.Point(139, 78);
+            this.TxtQuantity.Name = "TxtQuantity";
+            this.TxtQuantity.Size = new System.Drawing.Size(257, 26);
+            this.TxtQuantity.TabIndex = 8;
+            this.TxtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtQuantity_KeyPress);
             // 
             // label1
             // 
@@ -93,6 +102,7 @@
             this.BtnReset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnReset.TabIndex = 6;
             this.BtnReset.TabStop = false;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // BtnAddStock
             // 
@@ -103,9 +113,12 @@
             this.BtnAddStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnAddStock.TabIndex = 5;
             this.BtnAddStock.TabStop = false;
+            this.BtnAddStock.Click += new System.EventHandler(this.BtnAddStock_Click);
             // 
             // TxtProductName
             // 
+            this.TxtProductName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.TxtProductName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.TxtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtProductName.Location = new System.Drawing.Point(139, 32);
             this.TxtProductName.Name = "TxtProductName";
@@ -144,29 +157,22 @@
             this.DGVStockDetails.Size = new System.Drawing.Size(593, 260);
             this.DGVStockDetails.TabIndex = 5;
             // 
-            // TxtQuantity
-            // 
-            this.TxtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtQuantity.Location = new System.Drawing.Point(139, 78);
-            this.TxtQuantity.Name = "TxtQuantity";
-            this.TxtQuantity.Size = new System.Drawing.Size(257, 26);
-            this.TxtQuantity.TabIndex = 8;
-            // 
             // Stock
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(632, 466);
+            this.ClientSize = new System.Drawing.Size(616, 466);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Stock";
             this.Text = "Stock";
+            this.Load += new System.EventHandler(this.Stock_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnReset)).EndInit();
