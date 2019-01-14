@@ -15,12 +15,12 @@ namespace ShopBillingApp.DAL
         {
             try
             {
-                string ConnectionString = "server=localhost; User Id = root; pwd =; database=shop;";
+                string ConnectionString = "server=localhost; User Id = root; pwd =123; database=shop;";
                 Con = new MySqlConnection(ConnectionString);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Connection Failed");
             }
         }
     }

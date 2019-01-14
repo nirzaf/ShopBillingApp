@@ -22,5 +22,59 @@ namespace ShopBillingApp
         {
             Application.Exit();
         }
+
+        private void MenuBrand_Click(object sender, EventArgs e)
+        {
+            Brand ChildForm = new Brand
+            {
+                MdiParent = this
+            };
+            ChildForm.Show();
+        }
+
+        private void MenuCategory_Click(object sender, EventArgs e)
+        {
+            Category ChildForm = new Category
+            {
+                MdiParent = this
+            };
+            ChildForm.Show();
+        }
+
+        private void MenuProducts_Click(object sender, EventArgs e)
+        {
+            Product ChildForm = new Product
+            {
+                MdiParent = this
+            };
+            ChildForm.Show();
+        }
+
+        private void MenuCustomers_Click(object sender, EventArgs e)
+        {
+            Customers ChildForm = new Customers
+            {
+                MdiParent = this
+            };
+            ChildForm.Show();
+        }
+
+        private void MenuStocks_Click(object sender, EventArgs e)
+        {
+            Stock ChildForm = new Stock
+            {
+                MdiParent = this
+            };
+            ChildForm.Show();
+        }
+
+        private void MenuManageUsers_Click(object sender, EventArgs e)
+        {
+            ManageUsers ChildForm = new ManageUsers
+            {
+                MdiParent = this
+            };
+            ChildForm.Show();
+        }
     }
 }
