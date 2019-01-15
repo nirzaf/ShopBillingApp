@@ -20,7 +20,7 @@ namespace ShopBillingApp.DAL
             }
             catch (Exception)
             {
-                MessageBox.Show("Connection Failed");
+                MessageBox.Show("MySql Connection Failed! Please Check the MySql Connection");
             }
         }
     }

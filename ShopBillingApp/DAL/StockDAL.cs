@@ -14,7 +14,7 @@ namespace ShopBillingApp.DAL
     {
         DB C = new DB();
 
-        public int InsertCategory(StockBAL S)
+        public int AddStockDetails(StockBAL S)
         {
             try
             {
@@ -65,6 +65,34 @@ namespace ShopBillingApp.DAL
             }
         }
 
+
+        public int UpdateMinimumStock(StockBAL S)
+        {
+            try
+            {
+                using (C.Con)
+                {
+                    MySqlCommand cmd = new MySqlCommand("UpdateMinStockQty", C.Con)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
+                    cmd.Parameters.Add(new MySqlParameter("Pro_ID", S.ProductID));
+                    cmd.Parameters.Add(new MySqlParameter("Quantity", S.Quantity));
+                    cmd.Connection.Open();
+                    int Result = cmd.ExecuteNonQuery();
+                    C.Con.Close();
+                    return Result;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
+
         public DataTable CheckProductByID(int ProductID)
         {
             try
@@ -86,7 +114,7 @@ namespace ShopBillingApp.DAL
             }
         }
 
-        public DataTable LoadDGVCategory()
+        public DataTable LoadDGVStock()
         {
             try
             {
@@ -106,5 +134,44 @@ namespace ShopBillingApp.DAL
             }
         }
 
+        public DataTable LoadDGVStockWithMinStock()
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("LoadStockWithMinimumStockDetails", C.Con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                MySqlDataAdapter Sda = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                Sda.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
+
+        public DataTable LoadDGVMinimumStockNotification()
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("LoadMinimumStockNotification", C.Con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                MySqlDataAdapter Sda = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                Sda.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
     }
 }

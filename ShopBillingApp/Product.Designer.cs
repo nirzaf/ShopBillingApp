@@ -50,12 +50,12 @@
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TxtFilterByProductName = new System.Windows.Forms.TextBox();
-            this.TxtFilterByBrand = new System.Windows.Forms.TextBox();
             this.TxtFilterByCategory = new System.Windows.Forms.TextBox();
+            this.TxtFilterByBrand = new System.Windows.Forms.TextBox();
+            this.TxtFilterByProductName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProduct)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnUpdate)).BeginInit();
@@ -254,25 +254,32 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filter By";
             // 
-            // label6
+            // TxtFilterByCategory
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 22);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Product Name";
+            this.TxtFilterByCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFilterByCategory.Location = new System.Drawing.Point(694, 20);
+            this.TxtFilterByCategory.Name = "TxtFilterByCategory";
+            this.TxtFilterByCategory.Size = new System.Drawing.Size(185, 26);
+            this.TxtFilterByCategory.TabIndex = 20;
+            this.TxtFilterByCategory.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFilterByCategory_KeyUp);
             // 
-            // label7
+            // TxtFilterByBrand
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(330, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 22);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Brand ";
+            this.TxtFilterByBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFilterByBrand.Location = new System.Drawing.Point(393, 20);
+            this.TxtFilterByBrand.Name = "TxtFilterByBrand";
+            this.TxtFilterByBrand.Size = new System.Drawing.Size(185, 26);
+            this.TxtFilterByBrand.TabIndex = 19;
+            this.TxtFilterByBrand.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFilterByBrand_KeyUp);
+            // 
+            // TxtFilterByProductName
+            // 
+            this.TxtFilterByProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFilterByProductName.Location = new System.Drawing.Point(139, 20);
+            this.TxtFilterByProductName.Name = "TxtFilterByProductName";
+            this.TxtFilterByProductName.Size = new System.Drawing.Size(185, 26);
+            this.TxtFilterByProductName.TabIndex = 16;
+            this.TxtFilterByProductName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFilterByProductName_KeyUp);
             // 
             // label8
             // 
@@ -284,32 +291,25 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Category";
             // 
-            // TxtFilterByProductName
+            // label7
             // 
-            this.TxtFilterByProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFilterByProductName.Location = new System.Drawing.Point(139, 20);
-            this.TxtFilterByProductName.Name = "TxtFilterByProductName";
-            this.TxtFilterByProductName.Size = new System.Drawing.Size(185, 26);
-            this.TxtFilterByProductName.TabIndex = 16;
-            this.TxtFilterByProductName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFilterByProductName_KeyUp);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(330, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 22);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Brand ";
             // 
-            // TxtFilterByBrand
+            // label6
             // 
-            this.TxtFilterByBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFilterByBrand.Location = new System.Drawing.Point(393, 20);
-            this.TxtFilterByBrand.Name = "TxtFilterByBrand";
-            this.TxtFilterByBrand.Size = new System.Drawing.Size(185, 26);
-            this.TxtFilterByBrand.TabIndex = 19;
-            this.TxtFilterByBrand.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFilterByBrand_KeyUp);
-            // 
-            // TxtFilterByCategory
-            // 
-            this.TxtFilterByCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFilterByCategory.Location = new System.Drawing.Point(694, 20);
-            this.TxtFilterByCategory.Name = "TxtFilterByCategory";
-            this.TxtFilterByCategory.Size = new System.Drawing.Size(185, 26);
-            this.TxtFilterByCategory.TabIndex = 20;
-            this.TxtFilterByCategory.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFilterByCategory_KeyUp);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 22);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Product Name";
             // 
             // Product
             // 

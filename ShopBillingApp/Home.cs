@@ -76,5 +76,32 @@ namespace ShopBillingApp
             };
             ChildForm.Show();
         }
+
+        private void MenuMinimumStock_Click(object sender, EventArgs e)
+        {
+            MinimumStock ChildForm = new MinimumStock
+            {
+                MdiParent = this
+            };
+            ChildForm.Show();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            LoadDGVMinimumStockNotification();
+        }
+
+        public void LoadDGVMinimumStockNotification()
+        {
+            try
+            {
+                StockDAL sd = new StockDAL();
+                DGVMinimumStock.DataSource = sd.LoadDGVMinimumStockNotification();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace ShopBillingApp
                 LoadProductID();
                 sb.ProductID = ProductID;
                 sb.Quantity = Convert.ToInt32(TxtQuantity.Text.Trim());
-                int Result = sd.InsertCategory(sb);
+                int Result = sd.AddStockDetails(sb);
                 if (Result == 1)
                 {
                     MessageBox.Show("Product Added Succesfully");
@@ -99,7 +99,7 @@ namespace ShopBillingApp
                     LoadProductID();
                     sb.ProductID = ProductID;
                     sb.Quantity = Convert.ToInt32(TxtQuantity.Text.Trim());
-                    int Result = sd.InsertCategory(sb);
+                    int Result = sd.AddStockDetails(sb);
                     if (Result == 1)
                     {
                         MessageBox.Show("Product Added Succesfully");
@@ -122,7 +122,7 @@ namespace ShopBillingApp
             try
             {
                 StockDAL sd = new StockDAL();
-                DGVStockDetails.DataSource = sd.LoadDGVCategory();
+                DGVStockDetails.DataSource = sd.LoadDGVStock();
             }
             catch (Exception)
             {
