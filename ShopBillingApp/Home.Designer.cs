@@ -40,6 +40,8 @@
             this.ProductsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStocks = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuMinimumStock = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuTransactions = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemInvoice = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuSalesReport = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,6 +60,7 @@
             this.MenuMaster,
             this.SettingsToolStripMenuItem,
             this.ProductsToolStripMenuItem1,
+            this.MenuTransactions,
             this.ReportsToolStripMenuItem,
             this.ExitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -80,28 +83,28 @@
             // MenuBrand
             // 
             this.MenuBrand.Name = "MenuBrand";
-            this.MenuBrand.Size = new System.Drawing.Size(180, 26);
+            this.MenuBrand.Size = new System.Drawing.Size(168, 26);
             this.MenuBrand.Text = "Brand";
             this.MenuBrand.Click += new System.EventHandler(this.MenuBrand_Click);
             // 
             // MenuCategory
             // 
             this.MenuCategory.Name = "MenuCategory";
-            this.MenuCategory.Size = new System.Drawing.Size(180, 26);
+            this.MenuCategory.Size = new System.Drawing.Size(168, 26);
             this.MenuCategory.Text = "Category";
             this.MenuCategory.Click += new System.EventHandler(this.MenuCategory_Click);
             // 
             // MenuProducts
             // 
             this.MenuProducts.Name = "MenuProducts";
-            this.MenuProducts.Size = new System.Drawing.Size(180, 26);
+            this.MenuProducts.Size = new System.Drawing.Size(168, 26);
             this.MenuProducts.Text = "Products";
             this.MenuProducts.Click += new System.EventHandler(this.MenuProducts_Click);
             // 
             // MenuCustomers
             // 
             this.MenuCustomers.Name = "MenuCustomers";
-            this.MenuCustomers.Size = new System.Drawing.Size(180, 26);
+            this.MenuCustomers.Size = new System.Drawing.Size(168, 26);
             this.MenuCustomers.Text = "Customers";
             this.MenuCustomers.Click += new System.EventHandler(this.MenuCustomers_Click);
             // 
@@ -128,6 +131,7 @@
             this.ProductsToolStripMenuItem1.Name = "ProductsToolStripMenuItem1";
             this.ProductsToolStripMenuItem1.Size = new System.Drawing.Size(95, 26);
             this.ProductsToolStripMenuItem1.Text = "Products";
+            this.ProductsToolStripMenuItem1.Click += new System.EventHandler(this.ProductsToolStripMenuItem1_Click);
             // 
             // MenuStocks
             // 
@@ -142,6 +146,21 @@
             this.MenuMinimumStock.Size = new System.Drawing.Size(218, 26);
             this.MenuMinimumStock.Text = "Minimum Stocks";
             this.MenuMinimumStock.Click += new System.EventHandler(this.MenuMinimumStock_Click);
+            // 
+            // MenuTransactions
+            // 
+            this.MenuTransactions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemInvoice});
+            this.MenuTransactions.Name = "MenuTransactions";
+            this.MenuTransactions.Size = new System.Drawing.Size(128, 26);
+            this.MenuTransactions.Text = "Transactions";
+            // 
+            // MenuItemInvoice
+            // 
+            this.MenuItemInvoice.Name = "MenuItemInvoice";
+            this.MenuItemInvoice.Size = new System.Drawing.Size(139, 26);
+            this.MenuItemInvoice.Text = "Invoice";
+            this.MenuItemInvoice.Click += new System.EventHandler(this.MenuItemInvoice_Click);
             // 
             // ReportsToolStripMenuItem
             // 
@@ -233,5 +252,7 @@
         private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
         private System.Windows.Forms.DataGridView DGVMinimumStock;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem MenuTransactions;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemInvoice;
     }
 }

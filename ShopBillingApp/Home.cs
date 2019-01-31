@@ -25,6 +25,14 @@ namespace ShopBillingApp
 
         private void MenuBrand_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.GetType() == typeof(Brand))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             Brand ChildForm = new Brand
             {
                 MdiParent = this
@@ -34,6 +42,14 @@ namespace ShopBillingApp
 
         private void MenuCategory_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.GetType() == typeof(Category))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             Category ChildForm = new Category
             {
                 MdiParent = this
@@ -43,6 +59,14 @@ namespace ShopBillingApp
 
         private void MenuProducts_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.GetType() == typeof(Product))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             Product ChildForm = new Product
             {
                 MdiParent = this
@@ -52,6 +76,14 @@ namespace ShopBillingApp
 
         private void MenuCustomers_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.GetType() == typeof(Customers))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             Customers ChildForm = new Customers
             {
                 MdiParent = this
@@ -61,6 +93,14 @@ namespace ShopBillingApp
 
         private void MenuStocks_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.GetType() == typeof(Stock))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             Stock ChildForm = new Stock
             {
                 MdiParent = this
@@ -70,6 +110,14 @@ namespace ShopBillingApp
 
         private void MenuManageUsers_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.GetType() == typeof(ManageUsers))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             ManageUsers ChildForm = new ManageUsers
             {
                 MdiParent = this
@@ -79,6 +127,14 @@ namespace ShopBillingApp
 
         private void MenuMinimumStock_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.GetType() == typeof(MinimumStock))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             MinimumStock ChildForm = new MinimumStock
             {
                 MdiParent = this
@@ -102,6 +158,28 @@ namespace ShopBillingApp
             {
                 throw;
             }
+        }
+
+        private void MenuItemInvoice_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.GetType() == typeof(Invoice))
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+            Invoice ChildForm = new Invoice
+            {
+                MdiParent = this
+            };
+            ChildForm.Show();
+        }
+
+        private void ProductsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
